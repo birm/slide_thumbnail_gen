@@ -24,6 +24,7 @@ def gen_thumbnail(metadata):
         dest =  filename + "." + imgtype
         print(dest)
         slide.get_thumbnail([size,size]).save(dest, imgtype.upper())
+        return metadata
 
 #get manifest
 with open(manifest_path, 'r') as f:
